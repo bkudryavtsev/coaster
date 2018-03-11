@@ -23,25 +23,25 @@
             <div class="planner">
             <h2 class="welcome-text">Plan your trip</h2>
               <form id="planner-form" class="form-group">
-                <input type="text" id="place-from" class="form-control" placeholder="From" required/>
-                <input type="text" id="place-to" class="form-control" placeholder="To" required/>
+                <input type="text" id="place-from" class="form-control" placeholder="From"/>
+                <input type="text" id="place-to" class="form-control" placeholder="To"/>
                 <div class="form-row">
                   <div class="col">
-                    <input type="text" id="date-from" class="form-control" placeholder="Departure" autocomplete="off" required/>
+                    <input type="text" id="date-from" class="form-control" placeholder="Departure" autocomplete="off"/>
                   </div>
                   <div class="col">
-                    <input type="text" id="date-to" class="form-control" placeholder="Return" autocomplete="off" required/>
+                    <input type="text" id="date-to" class="form-control" placeholder="Return" autocomplete="off"/>
                   </div>
                 </div>
-                <input type="submit" id="submit" class="btn btn-info float-right" value="Estimate Trip Expenses"/>
+                <input type="button" id="submit" class="btn btn-info float-right" value="Estimate Trip Expenses"/>
               </form>
             </div>
           </div>
           <div class="col">
-            <div class="cost-total">$<span id="cost-estimate"><span></div>
+            <div class="cost-total">$<span id="cost-estimate">&nbsp;- - -<span></div>
             <div class="weather-icons">
-              <span id="umbrella"><img src="img/umbrella.svg" /></span>
-              <span id="tshirt"><img src="img/tshirt.svg"/></span>
+              <span id="umbrella" data-toggle="tooltip" data-placement="left" title="Bring an umbrella!"><img src="img/umbrella.svg" /></span>
+              <span id="tshirt" data-toggle="tooltip" data-placement="right" title="No jacket needed!"><img src="img/tshirt.svg"/></span>
             </div>
           </div>
       </div>
@@ -58,6 +58,12 @@
       crossorigin="anonymous"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJmn8blmopMaHTFn0UyQzqQ4t8CqlHYfs&libraries=places&callback=initMap"
       async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/jquery.animateNumber.min.js"></script>
     <script type="text/javascript" src="js/coaster.js"></script>
   </body>

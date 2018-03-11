@@ -40,7 +40,7 @@ form input {
 }
 
 .cost-total {
-  margin-top: 128px;
+  margin-top: 150px;
   text-align: center;
   font-size: 5em;
   color: #fff;
@@ -51,10 +51,21 @@ form input {
   color: #fff;
 }
 
+#umbrella, #tshirt {
+  display: none;
+}
+
 #umbrella img {
-  width: 78px;
+  width: 64px;
+  fill: #fff;
 }
 
 #tshirt img {
-  width: 98px;
+  width: 80px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .planner-container .planner {
+    width: 80%;
+  }
 }
