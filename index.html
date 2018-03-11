@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/ico" href="img/favicon.ico">
+
+    <title>coaster - Estimate your trip expenses</title>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/coaster.css">
+  </head>
+  <body>
+    <div class="header">
+      <img class="logo" src="img/logo.png" />
+    </div>
+
+    <div class="planner-container">
+      <div class="row">
+          <div class="col">
+            <div class="planner">
+            <h2 class="welcome-text">Plan your trip</h2>
+              <form id="planner-form" class="form-group">
+                <input type="text" id="place-from" class="form-control" placeholder="From" required/>
+                <input type="text" id="place-to" class="form-control" placeholder="To" required/>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" id="date-from" class="form-control" placeholder="Departure" autocomplete="off" required/>
+                  </div>
+                  <div class="col">
+                    <input type="text" id="date-to" class="form-control" placeholder="Return" autocomplete="off" required/>
+                  </div>
+                </div>
+                <input type="submit" id="submit" class="btn btn-info float-right" value="Estimate Trip Expenses"/>
+              </form>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cost-total">$<span id="cost-estimate"><span></div>
+            <div class="weather-icons">
+              <span id="umbrella"><img src="img/umbrella.svg" /></span>
+              <span id="tshirt"><img src="img/tshirt.svg"/></span>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJmn8blmopMaHTFn0UyQzqQ4t8CqlHYfs&libraries=places&callback=initMap"
+      async defer></script>
+    <script type="text/javascript" src="js/jquery.animateNumber.min.js"></script>
+    <script type="text/javascript" src="js/coaster.js"></script>
+  </body>
+</html>
