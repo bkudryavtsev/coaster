@@ -32,13 +32,13 @@ $('#search-form').submit(function (e) {
   var costData = {
                   "dailyFoodCost": 30.0,
                   "flightCosts": 1234.0,
-                  "hotelCosts": 123.00,
+                  "hotelCost": 123.00,
                   "weather": [10.0, "rain"]
                  };
 
   var foodCost = costData["dailyFoodCost"] * tripDuration;
   var flightCosts = costData["flightCosts"];
-  var hotelCosts = costData["dailyLivingCosts"] * tripDuration;
+  var hotelCosts = costData["hotelCost"] * tripDuration;
   var clothes = (costData["weather"][0] < 10.0) ? "jacket" : "shirt";
   var umbrella = (costData["weather"][1] === "rain") ? true : false;
 
@@ -60,4 +60,5 @@ $('#search-form').submit(function (e) {
   });
 
   e.preventDefault();
+  return false;
 });
